@@ -1,0 +1,55 @@
+.btn{
+	text-transform: uppercase;
+	color: $color-white;
+	display: inline-block;
+	text-decoration: none;
+	padding: 17px 50px;
+	font-size: 18px;
+    font-family: 'latoregular';
+    position: relative;
+    z-index: 1;
+
+    &:after{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		border: 1px solid transparent;
+		z-index: -1;
+		@include transition(.5s);
+	}
+
+    &:hover{
+		&:after{
+			@include transform(scaleX(1.2) scaleY(1.4));
+			opacity: 0;
+		}
+	}
+
+    @include respond(phone) {
+    	padding: 10px 35px;
+    	font-size: 16px;
+    }
+
+	&__white{
+		background: rgba(255, 255, 255, .2);
+		border: 1px solid $color-white;
+	}
+
+	&__white:after{
+		background: rgba(255, 255, 255, .4);
+	}
+
+	&__black{
+		background: rgba(0, 0, 0, .4);
+		border: 1px solid $color-black;
+	}
+
+	&__black:after{
+		background: rgba(0, 0, 0, .4);
+	}
+}
+
+

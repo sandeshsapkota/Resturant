@@ -1,0 +1,590 @@
+/************** PROMO **************/
+
+
+.promo{
+	height: 100vh;
+	width: 100%;
+	background:  url(../img/promo/bg-promo.jpg) 0 0 no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	@include respond(tab-land) {
+		height: auto;
+		padding: 130px 0 50px;
+	}
+ 
+	&__text--wrap{
+		text-align: center;
+		margin-top: 75px;
+
+		@include respond(tab-land) {
+			margin-top: 0;
+		}
+	}
+ 
+	.seperator{
+		padding-top: 45px;
+
+		@include respond(tab-land) {
+			padding-top: 25px;
+		}
+	}
+
+	.btn__wrap{
+		margin-top: 39px;
+		display: flex;
+		justify-content: center;
+
+		@include respond(phone) {
+			margin-top: 29px;
+		}
+
+		@include respond(small-phone) {
+			margin-top: 20px;
+			flex-direction: column;
+
+		}
+	}
+
+	.btn{
+		margin: 0 13px;
+
+		@include respond(small-phone) {
+			margin: 0 50px;
+
+			&:last-child{
+				margin-top: 15px;
+			}
+		}
+	}
+}
+
+
+
+/************** ABOUT **************/
+
+
+.about{
+	background: url(../img/about/bg-about.png) 0 0 no-repeat;
+	background-size: cover;
+	padding: 64px 0 37px;
+
+	@include respond(tab-port) {
+		padding: 38px 0 0;
+	}
+
+	@include respond(phone) {
+		padding-bottom: 15px ;
+	}
+
+	.flex-container{
+
+		@include respond(tab-port) {
+			flex-direction: column;
+		}
+	}
+
+	&__food{
+		flex-basis: 43.2%;
+		text-align: center;
+		padding: 25px 0 0 110px;
+
+		@include respond(tab-land) {
+			padding: 0;
+			flex-basis: 50%;
+			margin: 0 30px;
+		}
+
+		@include respond(small-phone) {
+			margin: 0 15px;
+		}
+ 	}
+
+	.seperator{
+		margin-top: 10px;
+	}
+
+	.paragraph{
+		margin-top: 26px;
+		font-weight: 400;
+
+		@include respond(tab-port) {
+			margin-top: 16px;
+		}
+	}
+
+	&__cook{
+		margin: 50px auto 0;
+		max-width: 143px;
+
+		@include respond(tab-port) {
+			margin: 25px auto 15px;
+		}
+
+		img{
+			max-width: 180px;
+		}
+	}
+
+	&__dish{
+		padding-left: 70px;
+
+		@include respond(tab-land) {
+			flex-basis: 45%;
+			padding: 0;
+			justify-content: center;
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+		}
+
+		@include respond(tab-port) {
+			padding: 0 50px;
+		}
+
+		img{
+			@include transition(.4s);
+
+			&:hover{
+				@include transform(scale(1.04));
+			}
+		}
+	}
+}
+
+
+/************** INGREDIENT **************/
+
+
+.ingredient{
+	background: url(../img/ingredients/bg-ingredient.jpg) 0 0 no-repeat;
+	background-size: cover;
+	@extend %sec-padding;
+
+	@include respond(phone) {
+		padding: 0;
+	}
+
+	.darkbox{
+		width: 520px;
+		padding: 50px 40px;
+		margin-left: auto;
+		margin-right: 100px;
+
+		@include respond(tab-port) {
+			margin: 0 auto;
+			padding: 38px 35px 40px;
+		}
+
+
+		@include respond(phone) {
+			margin: 0;
+			width: 100%;
+		}
+
+		@include respond(small-phone) {
+			padding: 38px 15px 40px;
+		}
+	}
+
+	.seperator{
+		margin: 16px 0 25px;
+
+		@include respond(phone) {
+			margin: 20px 0;
+		}
+	}
+
+	&__item--list{
+		list-style: none;
+		margin-top: 45px;
+
+		@include respond(phone) {
+			margin-top: 25px;
+		}
+	}
+
+	&__item{
+		display: inline-block;
+		margin: 0 15px;
+
+		@include respond(small-phone) {
+			margin: 0 10px;
+			width: 70px;
+		}
+
+		img{
+			width: 95px;
+		}
+	}
+}
+
+
+/************** MENU **************/
+
+
+.menu{
+	background: url(../img/menu/bg-menu.png) 0 0;
+	background-size: cever;
+	position: relative;
+	padding: 25px 0 75px;
+
+	@include respond(tab-port) {
+		padding: 16px 0 29px;
+	}
+
+ 	.heading__primary{
+	 	color: $color-primary;
+	 	text-align: center;
+ 		margin-top: 50px;
+
+ 		@include respond(tab-port) {
+ 			margin-top: 27px;
+ 		}
+	}
+
+	.seperator{
+		margin-top: 15px;
+	}
+
+	.container{
+	 	justify-content: space-around;
+	}
+
+	&__list--wrap{
+		display: flex;
+		justify-content: space-around;
+
+		@include respond(tab-land) {
+			justify-content: center;
+		}
+
+		@include respond(tab-port) {
+			flex-direction: column;
+		}
+	}
+
+	&__list{
+	 	flex-basis: 36.4%;
+
+	 	@include respond(tab-land) {
+	 		flex-basis: 40%;
+	 		margin: 0 25px;
+	 	}
+
+	 	@include respond(tab-land) {
+	 		margin: 0 40px;
+	 	}
+
+	 	@include respond(tab-land) {
+	 		margin: 0 15px;
+	 	}
+	}
+
+	&__item {
+	 	list-style: none;
+	}
+
+	&__food--list{
+	 	list-style: none;
+	}
+
+	&__food--item{
+	 	padding: 10px;
+	 	margin-top: 12px;
+	 	position: relative;
+
+	 	.menu__special--box{
+	 		position: absolute;
+	 		right: 0;
+	 		top: 0;
+	 		color: $color-white;
+	 		font-size: 14px;
+	 		padding: 1px 12px 4px 12px;
+	 		background: url(../img/menu/bg-special.png) 0 0 no-repeat;
+	 		visibility: hidden;
+	 		@include transform(translate(1px,-90%));
+	 	}
+
+	 	&.menu__special{
+	 		border: 1px solid #e4d8b4;
+	 		.menu__special--box{
+	 			visibility: visible;
+	 		}
+ 		} 
+	}
+
+	&__food--intro{
+	 	display: flex;
+	 	justify-content: space-between;
+	 	padding-bottom: 10px;
+	 	border-bottom: 1px solid #e4d8ad;
+
+	 	span{
+	 		color: $color-primary;
+	 		font-size: 21px;
+	 	}
+	}
+
+	.paragraph{
+	 	margin-top: 9px;
+	}
+}
+
+
+/************** REVIEW **************/
+
+
+.review{
+	background: url(../img/reviews/bg-review.jpg) 0 0 no-repeat;
+	background-size: cover;
+	@extend %sec-padding;
+
+	@include respond(phone) {
+		padding: 0;
+	}
+
+	.seperator{
+		margin-top: 14px;
+	}
+
+	.darkbox{
+		margin: 0 auto;
+		padding: 75px 70px;
+		max-width: 760px;
+
+		@include respond(tab-port) {
+			width: 500px;
+			padding: 40px;
+			margin: 0 auto;
+		}
+
+		@include respond(phone) {
+			padding: 38px;
+			margin: 0;
+			width: 100%;
+		}
+
+		@include respond(small-phone) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+ 
+	&__text{
+		position: relative;
+
+		&:before{
+			content: '“';
+			position: absolute;
+			left: -20px;
+			top: -5px;
+			font-size: 40px;
+			color: #f2f4f4;
+			font-family: none;
+
+			@include respond(small-phone) {
+				left: 0px;
+			}
+		}
+
+		.paragraph{
+			font-size: 21px;
+			line-height: 1.8;
+
+			@include respond(small-phone) {
+				font-size: 19px;
+			}
+
+			&:first-child{
+    			font-family: 'gentium_book_basicbold';
+			}
+
+			&:last-child{
+    			font-size: 18px;
+			}
+		}
+	}
+
+	&__by{
+		font-size: 17px;
+	}
+}
+
+
+/************** RESERVATION **************/
+
+
+.reservation{
+	background: url(../img/menu/bg-menu.png) 0 0;
+	background-size: cover;
+	@extend %sec-padding;
+
+	.flex-container{
+		@include respond(tab-port) {
+			flex-direction: column;
+		}
+	}
+
+	&__image{
+	 	flex-basis: 50%;
+	 	display: flex;
+	 	justify-content: center;
+	 	padding: 0 15px;
+
+	 	&--wrap{
+	 		flex-basis: 43.2%;
+	 		margin: 0 20px;
+
+	 		@include respond(tab-land) {
+	 			align-self: center;
+	 		}
+
+	 		@include respond(tab-port) {
+	 			flex-basis: 31%;
+	 		}
+
+	 		@include respond(phone) {
+	 			flex-basis: 40%;
+	 			margin: 0 15px;
+
+	 		}
+	 	}
+
+	 	img{
+	 		visibility: hidden;
+	 		opacity: 0;
+	 		@include transition(.4s);
+	 		@include transform(translateX(-50px));
+
+	 		&.visible{
+	 			visibility: visible;
+	 			opacity: 1;
+	 			@include transform(translateX(0));
+	 		}
+	 	}
+	}
+
+	&__procedure{
+	 	flex-basis: 50%;
+	 	padding: 0 100px 0 85px;
+
+	 	@include respond(tab-land) {
+	 		padding: 20px;
+	 	}
+
+	 	@include respond(tab-land) {
+	 		padding: 35px 50px 0;
+	 	}
+
+	 	@include respond(small-phone) {
+	 		padding: 35px 15px 0;
+	 	}
+	 	 
+	}
+
+	.seperator{
+		margin-top: 15px;
+	}
+
+	&__desc{
+		text-align: center;
+	}
+
+	&__passage{
+		margin-top: 18px;
+
+		@include respond(small-phone) {
+			margin-top: 10px;
+		}
+		
+		.paragraph:last-child{
+			margin-top: 10px;
+		}
+	}
+
+	&__form{
+		display: flex;
+		margin-top: 45px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@include respond(tab-port) {
+			padding: 0 20px;
+			margin-top: 35px;
+		}
+
+		@include respond(phone) {
+			flex-direction: column;
+		}
+
+		@include respond(small-phone) {
+			margin-top: 20px;
+			padding: 0 10px;
+		}
+	}
+
+	.input__wrap{
+		flex-basis: calc(50% - 15px);
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 24px;
+
+		@include respond(small-phone) {
+			margin-bottom: 15px;
+		}
+
+		label{
+			font-weight: 700;
+			color: $color-primary;
+			margin-bottom: 5px;
+			font-size: 14px;
+		}
+
+		.input{
+			border: 1px solid #c8c6c6;
+			padding: 8px 22px 7px;
+			color: #7c7c7c;
+			font-style: italic;
+
+
+			@include respond(tab-port) {
+				padding: 8px 18px 7px;
+			}
+
+			&:focus{
+				outline: none;
+				border-color: $color-primary;
+				// box-shadow: 0px 0px 15px 1px rgba(25, 25, 25, .2);
+			}
+
+			&::placeholder{
+				color: #7c7c7c;
+			}
+
+			&[type="date"] {
+				background: $color-white url(../img/reservation/date-icon.png) right 19px center no-repeat;
+			}
+		}
+	}
+
+	.btn{
+		background: #c9a131;
+		padding: 7px 60px 8px;
+		margin: 0 auto;
+		font-family: inherit;
+
+		@include respond(phone) {
+			margin: 10px 0 0;
+			text-align: center;
+		}
+
+		&:after{
+			background: rgb(201, 161, 49);
+		}
+	}
+}
+

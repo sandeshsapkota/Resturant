@@ -1,0 +1,51 @@
+@mixin transition($time) {
+	-webkit-transition: $time;
+	-moz-transition: $time;
+	-ms-transition: $time;
+	-o-transition: $time;
+	transition: $time;
+}
+
+@mixin transform($value) {
+	-webkit-transform: $value;
+	-moz-transform: $value;
+	-ms-transform: $value;
+	-o-transform: $value;
+	transform: $value;
+}
+
+// mixin for responsive
+
+// tab-land: 901 to 1200;
+// tab-port: 601 - 900;
+// phone: 480 - 600
+// small-phone: 480
+
+@mixin respond($breakpoint) {
+
+	@if $breakpoint == small-phone {
+		@media (max-width: 480px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == phone {
+		@media (max-width: 600px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-port {
+		@media (max-width: 900px) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-land {
+		@media (max-width: 1200px) {
+			@content;
+		}
+	}
+}
+
+ 

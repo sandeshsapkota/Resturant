@@ -1,0 +1,38 @@
+.heading__primary{
+	font-size: 36px;
+	color: $color-white; 
+    font-family: 'yeseva_oneregular';
+
+    @include respond(small-phone) {
+    	font-size: 27px;
+    }
+
+	&--main{
+		font-size: 90px;
+
+		@include respond(tab-land) {
+			font-size: 70px;
+		}
+
+		@include respond(tab-port) {
+			font-size: 50px;
+		}
+
+		@include respond(phone) {
+			font-size: 35px;
+		}
+
+		@include respond(small-phone) {
+			font-size: 30px;
+			padding: 0 15px;
+		}
+	}
+}
+
+.paragraph{
+	font-size: 16px;
+	line-height: 1.5;
+	color: $color-dark;
+    font-family: 'latoregular';
+}
+

@@ -1,0 +1,81 @@
+.contact{
+	background: #191919;
+	@extend %sec-padding;
+
+	@include respond(phone) {
+		padding-top: 41px;
+	}
+
+	.seperator{
+		margin-top: 16px;
+		img{
+			height: 19px;
+		}
+	}
+
+	.heading__primary{
+		font-size: 21px;
+	}
+
+	.paragraph{
+		color: $color-white;
+		margin-top: 12px;
+	}
+
+	&__info--wrap{
+		display: flex;
+
+		@include respond(tab-port) {
+			flex-direction: column;
+		}
+	}
+
+	&__info{
+		flex: 1;
+		text-align: center;
+		padding: 0 40px;
+
+		@include respond(tab-land) {
+			padding: 0 25px;
+		}
+
+		@include respond(tab-port) {
+			&:not(:last-child)  {
+				margin-bottom: 30px;
+			}
+		} 
+
+		@include respond(phone) {
+			&:first-child{
+				padding: 0 45px;
+			}
+		}
+
+		@include respond(small-phone) {
+			padding: 0  15px!important;
+		}
+	}
+
+	.payment{
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		margin-top: 34px;
+
+		@include respond(tab-land) {
+			margin-top: 20px;
+		} 
+
+		&__item{
+			margin: 0 5px;
+		}
+	}
+
+	.social{
+		margin-top: 45px;
+
+		@include respond(tab-land) {
+			margin-top: 15px;
+		} 
+	}
+}

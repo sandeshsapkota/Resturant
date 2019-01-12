@@ -1,0 +1,36 @@
+/******** common classes ********/
+
+.color-primary{
+	color: $color-primary;
+}
+
+.container{
+	max-width: 1250px;
+	margin: 0 auto;
+}
+
+.flex-container{
+	display: flex;
+}
+
+.seperator{
+	text-align: center;
+	img{
+		display: inline-block;
+	}
+}
+
+/******** extends ********/
+
+%sec-padding{
+	padding: 75px 0;
+
+	@include respond(tab-port) {
+		padding: 50px 0;
+	}
+
+	@include respond(tab-port) {
+		padding: 45px 0;
+	}
+}
+
